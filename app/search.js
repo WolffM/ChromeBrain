@@ -6,7 +6,6 @@ var main = function() {
 		document.getElementByID("searchResultField").value("changed");
 
 	}
-
 	box.addEventListener("onChange", this.changefunc)
 
 }
