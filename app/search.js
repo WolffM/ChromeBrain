@@ -1,13 +1,17 @@
+
+
 var main = function() {
 
-	this.box = document.getElementByID("mainSearchBox");
 
-	this.changefunc = function(){
-		document.getElementByID("searchResultField").value("changed");
+	var changefunc = function(){
+		document.getElementById("searchResultField").innerHTML= document.getElementById("mainSearchBox").value
 
 	}
-	box.addEventListener("onChange", this.changefunc)
+	document.getElementById("mainSearchBox").addEventListener("input", changefunc)
 
 }
 
+
+document.addEventListener('DOMContentLoaded', function () {
 main();
+});
