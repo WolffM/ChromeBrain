@@ -1,21 +1,27 @@
 {
   "name": "ChromeBrain!",
   "description": "Chrome Search app",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
     "background": {
       "scripts": [
         "background.js"
         ]
      },
-    "permissons": 
+    "permissions": 
       [
         "tabs",
+        "storage",
         "notifications",
         "alarms",
         "history"
       ],
   "icons": {
       "16": "calculator-16.png", "128": "calculator-128.png"
-    }
+    },
+  "browser_action": {
+      "default_title": "ChromeBrain",
+      "defualt_icon": "chromeBrain.jpg",
+      "default_action": "search.html"
+  }
 }
