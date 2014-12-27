@@ -1,13 +1,10 @@
 {
   "name": "ChromeBrain!",
   "description": "Chrome Search app",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
     "background": {
       "persistent": false,
-      "scripts": [
-        "background.js"
-        ]
      },
     "permissions": 
       [
