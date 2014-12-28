@@ -6,14 +6,20 @@
   "version": "1.0",
 
 
+  "icons": {
+      "16": "chromeBrain.png",
+      "128": "chromeBrainMain.png"
+  },
+
   "browser_action": {
-      "default_title": "Make this page red",
-    "default_icon": "icon.png",
+    "default_title": "Make this page red",
+    "default_icon":  "chromeBrain.png",
     "default_popup": "popup.html"
   },
 
   "permissions": [
     "history",
-    "activeTab"
+    "activeTab",
+    "storage"
   ]
 }

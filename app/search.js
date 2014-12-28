@@ -22,8 +22,10 @@ var main = function() {
 	}
 	document.getElementById("mainSearchBox").addEventListener("input", changefunc)
 
-
-
+	chrome.storage.sync.get(null, function(items){
+		var allKeys = Object.keys(items);
+		console.log(allKeys);
+	});
 
 
 	chrome.tabs.query({active:true,currentWindow:true},function(tabArray){
@@ -31,20 +33,17 @@ var main = function() {
 	    var magicClosureVar = tabArray[0].url;
 	    var magicTitle = tabArray[0].title;
 	    chrome.history.search({"text":"google","maxResults":5,
-	    	"startTime":(new Date).getTime()-60*60*6*1000000}
-
-	    	,
+	    	"startTime":(new Date).getTime()-60*60*6*1000000},
 		    	function(someQueries){
 		    		var qName = "Question Unknown :(";
 		    		if(someQueries.length>0){
 		    			qName = someQueries[0].title;
 		    		}	
-		    		//Time to log question answer pair 
+		    		chrome.storage.sync.set({'qName': magicClosureVar}, function() {
+		    		});
 		    	}
-
 	    	);
-
-	});
+		});
 
 	chrome.history.search ( )
 
