@@ -16,11 +16,15 @@ var main = function() {
 		 		temp.innerHTML = historyItems[x].title;
 		 		result.appendChild(temp);
 		 	}
-		 	console.log(result)
+		 	console.log(result);
 			document.getElementById("searchResultField").innerHTML=result.innerHTML;
 		 })
 	}
 	document.getElementById("mainSearchBox").addEventListener("input", changefunc)
+	
+	chrome.tabs.query({active:true,currentWindow:true},function(tabArray){
+	    console.log(tabArray[0].url);
+	});
 }
 
 

@@ -2,14 +2,18 @@
   "manifest_version": 2,
 
   "name": "ChromeBrain",
-  "description": "This extension demonstrates a 'browser action' with kittens.",
+  "description": "Chrome Brain will store answers you have found in google searches for you to retrieve at a later time.",
   "version": "1.0",
 
+
   "browser_action": {
+      "default_title": "Make this page red",
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+
   "permissions": [
-    "history"
+    "history",
+    "activeTab"
   ]
 }
